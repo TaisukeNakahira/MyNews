@@ -1,0 +1,33 @@
+<html>
+    <head><strong>レコメンド機能</strong></head>
+    <body>
+        <div>
+            <button type="submit" onclick="location.href='{% url 'create_model' %}'" name="create_model_button">モデル作成</button>
+        </div>
+        {% comment %} <div>
+            <form action="{% url 'morphological_analysis' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="input_text" />
+                <button type="submit">形態素解析</button>
+            </form>
+            {% comment %} <input type="text" />
+            <button type="submit" onclick="location.href='{% url 'morphological_analysis' %}'">形態素解析</button> {% endcomment %}
+        {% comment %} </div> {% endcomment %}
+        <div>
+            <a href="{% url 'articles' %}">最近の記事<a>
+        </div>
+        <div>
+            <a href="{% url 'articles_all' %}">すべての記事<a>
+        </div>
+        {% comment %} <div>
+            <a href="{% url 'create_model_test' %}">モデル作成テスト<a>
+            </div>
+        <div> {% endcomment %}
+            {% comment %} <form action="/submit/" method="post"> {% endcomment %}
+                {% comment %} {% csrf_token %} {% endcomment %}
+            {% comment %} </form> {% endcomment %}
+        <div>
+            <a href="{% url 'recommendation' %}">レコメンド<a>
+        </div>
+    </body>
+</html>

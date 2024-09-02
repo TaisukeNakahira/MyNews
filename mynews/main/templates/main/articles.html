@@ -1,0 +1,33 @@
+
+<html>
+    <head>
+        <title>Articles</title>
+        <script src=""></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <table border="1">
+            <tr>
+                <th><strong>タイトル</strong></th>
+                <th><strong>発行年月日</strong></th>
+            </tr>
+            {% for info in infos %}
+                <tr>
+                    <th style="text-align:left;"><a href={{ info.url }}>{{ info.title }}</a></th>
+                    <th>{{ info.publish_date }}</th>
+                    <th>{{ info.site }}</th>
+                    <th><a id="toadmin" href="#" onclick="redirectToAdmin('{{ info.id }}')">Like</a></th>
+                    
+                    <script>
+                        function redirectToAdmin(infoId) {
+                            var adminURL = '{% url 'admin:main_articles_change' 0 %}'.replace('0', infoId);
+                            window.location.href = adminURL;
+                        }
+                    </script>
+
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

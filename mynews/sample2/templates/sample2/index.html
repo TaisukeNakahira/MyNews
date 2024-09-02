@@ -1,0 +1,17 @@
+<html>
+    <head><strong>sample2</strong></head>
+    <body>
+        <div>
+            {% for sentence in test_sentences %}
+                <p>{{ sentence }}</p>
+            {% endfor %}
+            <br>
+            {% for p in pp %}
+                <p>{{ p.name }}</p>
+                <p>{{ p.age }}</p>
+                <p>{{ p.hobby }}</p>
+                <p>{{ p.birthday }}</p>
+            {% endfor %}
+        </div>
+    </body>
+</html>

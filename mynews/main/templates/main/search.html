@@ -1,0 +1,38 @@
+<html>
+    <head><strong>キーワード検索</strong></head>
+    <body>
+        <div class="filter">
+            <label for="keyword">キーワード</label>
+            <input type="text" name="キーワード" id="keyword" placeholder="（例）ニュータイプ モビルスーツ アムロ">
+        </div>
+        <div>
+            <label for="duration">期間</label>
+            <input type="date" name="期間" id="duration" value="" />
+        </div>
+        <div>
+            <label for="site">サイト</label>
+            <input type="checkbox" name="サイト" id="site" value="1">サイト1
+            <input type="checkbox" name="サイト" id="site" value="2">サイト2
+            <input type="checkbox" name="サイト" id="site" value="3">サイト3
+            <input type="checkbox" name="サイト" id="site" value="4">サイト4
+            <input type="checkbox" name="サイト" id="site" value="5">サイト5
+        </div>
+        <table border="1">
+            <tr>
+                <th>URL</th>
+                <th>タイトル</th>
+                <th>本文</th>
+                <th>作成日</th>
+            </tr>
+            {% comment %} {% for n in news %}
+                <tr>
+                    <th>{{ n.url }}</th>
+                    <th>{{ n.title }}</th>
+                    <th>{{ n.text }}</th>
+                    <th>{{ n.publish_date }}</th>
+                </tr>
+            {% endfor %} {% endcomment %}
+        </table>
+        <button onclick="location.href='..'">戻る</button>
+    </body>
+</html>

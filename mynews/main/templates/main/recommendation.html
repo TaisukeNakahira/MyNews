@@ -1,0 +1,18 @@
+<html>
+    <head><strong>レコメンド</strong></head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>タイトル</th>
+                <th>作成日</th>
+            </tr>
+            {% for article in articles %}
+                <tr>
+                    <th style="text-align:left;"><a href={{ article.url }}>{{ article.title }}</a></th>
+                    <th>{{ article.publish_date }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+        <button onclick="location.href='..'">戻る</button>
+    </body>
+</html>
